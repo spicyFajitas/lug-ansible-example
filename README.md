@@ -14,7 +14,7 @@ If you use this repository directly (forked, copied, etc.) MAKE SURE YOU CHANGE 
 pip install ansible
 ```
 
-## Ansible Playbooks
+## Usage
 
 To run playbooks, `cd` into the directory of your ansible repo.
 
@@ -25,6 +25,19 @@ To run the playbook on a remote machine, run using the command `ansible-playbook
 To limit the playbook run to certain hosts, use the `--limit hostname` flag. You can limit to more than one host by specifying the group name instead of hostname or by putting multiple hosts: `--limit "host1,host2,host3,host4"`
 
 To run a playbook in pretend mode, add the flag `--check`
+
+### Common Commands
+
+```bash
+# run a playbook in "pretend" mode 
+ansible-playbook server-xyxplay.yml -i inventory/inventory --vault-password-file location/of/your/vault-password-file.txt --check
+
+# run a playbook in "real" mode
+ansible-playbook server-xyxplay.yml -i inventory/inventory --vault-password-file location/of/your/vault-password-file.txt --check
+
+# edit an ansible vault
+ansible-vault edit path/to/ansible/vault-file.yml
+```
 
 ## Project Structure Reference
 
