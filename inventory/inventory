@@ -1,0 +1,25 @@
+[all]
+
+[gateway]
+192.168.1.1
+[gateway:vars]
+ansible_user=root
+
+[proxmox_hosts]
+192.168.1.2                 # proxmox node 1
+192.168.1.3                 # proxmox node 2
+192.168.1.4                 # proxmox node 3
+192.168.1.5                 # proxmox node 4
+[proxmox_hosts:vars]
+ansible_user=root
+
+[database_hosts]
+192.168.10.1                # database server 1
+192.168.10.2                # database server 2
+192.168.10.3                # database server 3
+192.168.10.4                # database server 4
+[database_hosts:vars]
+ansible_user=root
+
+[nas]
+192.168.20.1                # nas server

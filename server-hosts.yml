@@ -1,0 +1,7 @@
+---
+- name: Update Ubuntu Servers
+  hosts: k3s
+  become: yes
+  become_user: root
+  roles:
+    - hosts_update

@@ -1,0 +1,20 @@
+---
+
+ssh_keys:
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPkERQ9OvroUaDg74QOqkL8iudqcJHgJWSDu9L1dyAf9 example1"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIal5mlurJkB0W6vnUfCRDTFX8ONWkB05xoZgTapCF21 example2"
+  - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJtFe3N8fI3wie2qXJ2j2gPaj/UlWbheF6O/v9akODrm security-admin1"
+
+package_list:
+  - btop
+  - curl
+  - docker-compose
+  - fail2ban
+  - gdu
+  - git
+  - htop
+  - needrestart
+  - neofetch
+  - net-tools
+  - python3-pip
+  - vim

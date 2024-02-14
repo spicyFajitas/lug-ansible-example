@@ -1,0 +1,35 @@
+---
+- name: Add SSH keys to authorized keys file
+  ansible.builtin.lineinfile:
+    path: ~/.ssh/authorized_keys
+    line: "{{ item }}"
+    create: yes
+  loop: "{{ ssh_keys }}"
+  diff: True
+
+- name: Run apt update
+  apt:
+    update_cache: yes
+
+- name: Install required packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ package_list }}"
+
+- name: Enable and start SSH service
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  loop:
+    - fail2ban
+    - ssh
+
+- name: Run apt upgrade
+  apt:
+    upgrade: yes
+
+- name: Restart services if needed
+  # https://www.captainark.net/2016/01/31/debian-updates-with-ansible/
+  shell: needrestart -blra

@@ -1,0 +1,7 @@
+---
+
+base_dir: /opt/minecraft
+
+restart_policy: "unless-stopped"
+
+nas_ip: "192.168.20.1"
