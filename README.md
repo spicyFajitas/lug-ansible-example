@@ -69,7 +69,9 @@ ansible-playbook-repo/
 │   ├── database/         # Database server role - installs/configures database specific things (percona, mysql, etc)
 │   └── ...
 |
-├── site.yml              # Main playbook file
+├── common.yml            # Common playbook file
+├── serverA.yml           # ServerA playbook file
+├── databases.yml         # Databases playbook file
 └── ansible.cfg           # Ansible configuration file
 ```
 
