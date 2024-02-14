@@ -13,6 +13,9 @@ ansible_user=root
 [proxmox_hosts:vars]
 ansible_user=root
 
+[ubuntu_node]
+192.169.2.1
+
 [database_hosts]
 192.168.10.1                # database server 1
 192.168.10.2                # database server 2
