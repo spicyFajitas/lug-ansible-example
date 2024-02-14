@@ -35,6 +35,10 @@ ansible-playbook server-xyxplay.yml -i inventory/inventory --vault-password-file
 # run a playbook in "real" mode
 ansible-playbook server-xyxplay.yml -i inventory/inventory --vault-password-file location/of/your/vault-password-file.txt --check
 
+# create an ansible vault
+# will need to type/paste vault password into prompt
+ansible-vault create path/to/ansible/vault-file.yml
+
 # edit an ansible vault
 ansible-vault edit path/to/ansible/vault-file.yml
 ```
